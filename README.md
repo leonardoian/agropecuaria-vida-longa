@@ -120,7 +120,7 @@ Ou simplesmente abra o `index.html` direto no navegador. ✅
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/leonardo-ian" target="_blank">
+  <a href="https://www.linkedin.com/in/leonardo-ian-b8b410274/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <a href="https://github.com/leonardoian" target="_blank">
