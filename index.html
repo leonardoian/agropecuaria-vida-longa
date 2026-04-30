@@ -702,41 +702,6 @@ let fotoPreviewData = null, avaliacoes = {}, fotos = {}, historico = [], categor
 try { const h = localStorage.getItem('vl_historico'); if (h) historico = JSON.parse(h); } catch(e) {}
 function salvarStorage() { try { localStorage.setItem('vl_historico', JSON.stringify(historico)); } catch(e) {} }
 
-// ── DADOS ──
-const produtos = [
-  {id:1,cat:'racoes',animal:'cachorro',emoji:'🐕',nome:'Ração Golden Cão Adulto',desc:'Frango e arroz — 15kg.',preco:94.90, fotoUrl: "https://http2.mlstatic.com/D_NQ_NP_2X_979550-MLB85340858326_062025-F.webp"},
-  {id:2,cat:'racoes',animal:'cachorro',emoji:'🐕',nome:'Ração Golden Cão Filhote',desc:'Alta proteína — 15kg.',preco:99.90, fotoUrl: ""},
-  {id:3,cat:'racoes',animal:'cachorro',emoji:'🐕',nome:'Ração Special Dog Adulto',desc:'Frango — 25kg.',preco:139.90, fotoUrl: ""},
-  {id:4,cat:'racoes',animal:'gato',emoji:'🐈',nome:'Ração Whiskas Gato Adulto',desc:'Carne e frango — 3kg.',preco:39.90, fotoUrl: ""},
-  {id:5,cat:'racoes',animal:'gato',emoji:'🐈',nome:'Ração Golden Gato Castrado',desc:'Frango com abóbora — 10,1kg.',preco:119.90, fotoUrl: ""},
-  {id:6,cat:'racoes',animal:'gato',emoji:'🐈',nome:'Ração Premier Gato Filhote',desc:'Frango — 1,5kg.',preco:44.90, fotoUrl: ""},
-  {id:7,cat:'racoes',animal:'passarinho',emoji:'🐦',nome:'Mistura p/ Canário e Periquito',desc:'500g.',preco:12.90, fotoUrl: ""},
-  {id:8,cat:'racoes',animal:'passarinho',emoji:'🐦',nome:'Ração Extrusada p/ Passarinhos',desc:'300g.',preco:18.50, fotoUrl: ""},
-  {id:9,cat:'racoes',animal:'coelho',emoji:'🐇',nome:'Ração Coelho Adulto',desc:'5kg.',preco:52.90, fotoUrl: ""},
-  {id:10,cat:'racoes',animal:'galinha',emoji:'🐓',nome:'Ração Postura Galinha',desc:'Saco 25kg.',preco:89.90, fotoUrl: ""},
-  {id:11,cat:'racoes',animal:'galinha',emoji:'🐓',nome:'Ração Caipira Galinha',desc:'Saco 25kg.',preco:79.90, fotoUrl: ""},
-  {id:12,cat:'sementes',emoji:'🌿',nome:'Semente Braquiária brizantha',desc:'Emb. 5kg.',preco:85.00, fotoUrl: ""},
-  {id:13,cat:'sementes',emoji:'🌽',nome:'Semente de Milho Híbrido',desc:'60.000 sementes.',preco:149.90, fotoUrl: ""},
-  {id:14,cat:'sementes',emoji:'🫘',nome:'Semente de Soja (RS)',desc:'40kg.',preco:210.00, fotoUrl: ""},
-  {id:15,cat:'sementes',emoji:'🥬',nome:'Semente de Alface Americana',desc:'Envelope 5g.',preco:8.90, fotoUrl: ""},
-  {id:16,cat:'sementes',emoji:'🍅',nome:'Semente de Tomate Cereja',desc:'Envelope 1g.',preco:9.90, fotoUrl: ""},
-  {id:17,cat:'defensivos',emoji:'🧴',nome:'Roundup Original (Herbicida)',desc:'1 litro.',preco:42.90, fotoUrl: ""},
-  {id:18,cat:'defensivos',emoji:'🍄',nome:'Fungicida Amistar Top',desc:'200ml.',preco:98.00, fotoUrl: ""},
-  {id:19,cat:'defensivos',emoji:'🪲',nome:'Inseticida Engeo Pleno',desc:'200ml.',preco:87.50, fotoUrl: ""},
-  {id:20,cat:'defensivos',emoji:'🪴',nome:'Adubo NPK 10-10-10',desc:'Saco 25kg.',preco:69.90, fotoUrl: ""},
-  {id:21,cat:'defensivos',emoji:'🪨',nome:'Calcário Dolomítico',desc:'Saco 25kg.',preco:29.90, fotoUrl: ""},
-  {id:22,cat:'ferramentas',emoji:'⛏️',nome:'Enxada Reforçada',desc:'Cabo de madeira 1,40m.',preco:54.90, fotoUrl: ""},
-  {id:23,cat:'ferramentas',emoji:'🌾',nome:'Roçadeira a Gasolina 52cc',desc:'Motor 2 tempos.',preco:849.00, fotoUrl: ""},
-  {id:24,cat:'ferramentas',emoji:'💧',nome:'Mangueira 50m Tramontina',desc:'3/4" tripla camada.',preco:119.90, fotoUrl: ""},
-  {id:25,cat:'ferramentas',emoji:'🪢',nome:'Arame Farpado Belgo',desc:'500m.',preco:239.00, fotoUrl: ""},
-  {id:26,cat:'ferramentas',emoji:'🔨',nome:'Facão de Roça 16"',desc:'Aço carbono.',preco:49.90, fotoUrl: ""},
-  {id:27,cat:'ferramentas',emoji:'🔨',nome:'TESTE DE PRODUTO NOVO',desc:'É SÓ PRA TESTAR O PRODUTO',preco:0, fotoUrl: "https://tse4.mm.bing.net/th/id/OIP.HeTazG41TBUepbssJuDx-AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"},
-];
-
-const sugestoes = {
-  cachorro:[2,4,22], gato:[4,6,9], passarinho:[8,9], coelho:[7,9], galinha:[10,11],
-  sementes:[13,14,20], defensivos:[20,21,17], ferramentas:[22,26,24], racoes:[1,4,7]
-};
 
 // ── HELPERS ──
 function fmt(v) { return 'R$ ' + v.toFixed(2).replace('.', ','); }
